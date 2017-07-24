@@ -3,7 +3,7 @@
 
   
   <Data name="proc_test">
-    <SqlDefinition type="MySql" ConnStringName="ucsmyops_mysql">
+    <SqlDefinition type="MySql" ConnStringName="test_mysql">
       <SqlCommand>
         <![CDATA[
         INSERT sys_statis_log (log_time,log_content) VALUES(NOW(),'后台服务开始执行 proc_test');
@@ -15,7 +15,7 @@
   </Data>
 
   <Data name="proc_test1">
-    <SqlDefinition type="MySql" ConnStringName="ucsmyops_mysql">
+    <SqlDefinition type="MySql" ConnStringName="test_mysql">
       <SqlCommand>
         <![CDATA[
         INSERT sys_statis_log (log_time,log_content) VALUES(NOW(),'后台服务开始执行 proc_test1');
