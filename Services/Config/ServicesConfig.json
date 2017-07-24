@@ -1,0 +1,24 @@
+[
+  {
+    "ServiceName": "CallProcTask-proc_test1任务", //非空服务名称
+    "Assembly": "Services.exe", //非空程序集
+    "Methods": "Services.Tasks.CallProcTask", //非空执行类名 对应业务的类名
+    "ExecType": 3, //执行类型 ( 0:按指定间隔时间执行 1:每天指定时间执行 每天一次 2:指定时间执行一次 3.每天指定开始和结束时间并且按照指定间隔时间执行) 可空默认0
+    "S_Interval": 3600, //间隔时间 单位秒 可空默认60
+    "M_Interval": 0, //间隔时间 单位分 可空默认0
+    "H_Interval": 0, //间隔时间 单位小时 可空默认0
+    "ExecDayTime": "04:00:00", //ExecType为1时起效 每天指定时间执行 格式 HH:mm:ss 14:00:00 可空
+    "ExecDayStartTime": "04:00:00", //ExecType为3时起效 格式 HH:mm:ss 14:00:00 可空
+    "ExecDayEndTime": "06:00:00", //ExecType为3时起效 格式 HH:mm:ss 14:00:00 可空
+    "ExecTime": "2017/08/01 01:00:00", //ExecType为2时必填 指定时间执行一次 datetime yyyy-MM-dd HH:mm:ss  执行一次后结束
+    "Param": "proc_test1" //自定义参数 在本案例中为SQL参数 可空
+  },
+  {
+    "ServiceName": "CallProcTask-proc_test任务",
+    "Assembly": "Services.exe",
+    "Methods": "Services.Tasks.CallProcTask",
+    "S_Interval": 60,
+    "ExecType": 0,
+    "Param": "proc_test"
+  }
+]
