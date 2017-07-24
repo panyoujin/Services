@@ -63,14 +63,6 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Abstract\ServiceBase.cs" />
-    <Compile Include="Helper\ConfigHelper.cs" />
-    <Compile Include="Helper\Ext.DateTime.cs" />
-    <Compile Include="Helper\JsonHelper.cs" />
-    <Compile Include="Helper\RequestHelper.cs" />
-    <Compile Include="Log\Log.cs" />
-    <Compile Include="Log\LogFactory.cs" />
-    <Compile Include="Models\ServiceConfigModel.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="TaskService.cs" />
@@ -97,7 +89,12 @@
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <ProjectReference Include="..\Services.Common\Services.Common.csproj">
+      <Project>{0972084d-580e-47d9-8d38-13a0a87605ab}</Project>
+      <Name>Services.Common</Name>
+    </ProjectReference>
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.

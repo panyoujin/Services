@@ -1,13 +1,8 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Text;
 using System.Threading;
-using System.Threading.Tasks;
-using Services.Log;
-using Services.Models;
 
-namespace Services.Abstract
+namespace Services.Common
 {
     /// <summary>
     /// 服务基类
@@ -78,7 +73,7 @@ namespace Services.Abstract
                     {
                         try
                         {
-                            LogFactory.GetLogger().Info(string.Format("{2} Name:{0},ThreadState:{1}", t.Name, t.ThreadState, DateTime.Now.ToMillisecondString()));
+                            LogFactory.GetLogger().Info(string.Format("Name:{0},ThreadState:{1}", t.Name, t.ThreadState));
                             if (t.ThreadState != ThreadState.Stopped & t.ThreadState != ThreadState.StopRequested && t.ThreadState != ThreadState.Aborted && t.ThreadState != ThreadState.AbortRequested)
                             {
                                 isScuss = false;
@@ -87,7 +82,7 @@ namespace Services.Abstract
                         }
                         catch (Exception ex)
                         {
-                            LogFactory.GetLogger().Error(string.Format("Name:{0},ThreadState:{1} 异常:{2}", t.Name, t.ThreadState, DateTime.Now.ToMillisecondString(), ex));
+                            LogFactory.GetLogger().Error(string.Format("Name:{0},ThreadState:{1} 异常:{2}", t.Name, t.ThreadState, ex));
                         }
                     }
                     //_threadList.Clear();

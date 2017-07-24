@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Configuration;
 
-namespace Services
+namespace Services.Common
 {
     /// <summary>
     /// 解析项目配置文件的帮助类

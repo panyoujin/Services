@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Services.Common;
+using System;
 using Topshelf;
 
 namespace Services
@@ -16,11 +17,10 @@ namespace Services
 
             HostFactory.Run(x =>
             {
-                //x.UseLog4Net("log4net.config");
                 x.Service<TaskService>();
-                x.SetDescription("后台服务");
-                x.SetDisplayName("后台服务");
-                x.SetServiceName("BackServer");
+                x.SetDescription(ConfigHelper.GetConfigValue("Description", "后台服务"));
+                x.SetDisplayName(ConfigHelper.GetConfigValue("DisplayName", "后台服务"));
+                x.SetServiceName(ConfigHelper.GetConfigValue("ServiceName", "BackService"));
             });
         }
     }

@@ -1,7 +1,7 @@
 ﻿
 using log4net;
 
-namespace Services.Log
+namespace Services.Common
 {
     public class Log
     {

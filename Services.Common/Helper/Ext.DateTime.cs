@@ -2,7 +2,7 @@
 using System;
 using System.Text;
 
-namespace Services
+namespace Services.Common
 {
     public static partial class Ext
     {

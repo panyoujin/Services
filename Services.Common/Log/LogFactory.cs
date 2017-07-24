@@ -3,7 +3,7 @@ using log4net;
 using System;
 using System.IO;
 
-namespace Services.Log
+namespace Services.Common
 {
     public class LogFactory
     {

@@ -1,6 +1,5 @@
 ﻿using DataAccessHelper.SQLHelper;
-using Services.Abstract;
-using Services.Log;
+using Services.Common;
 using System;
 
 namespace Services.Tasks

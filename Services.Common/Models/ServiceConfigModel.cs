@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace Services.Models
+namespace Services.Common
 {
     /// <summary>
     /// 服务配置模型

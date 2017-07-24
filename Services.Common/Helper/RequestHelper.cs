@@ -2,8 +2,9 @@
 using System.IO;
 using System.Net;
 using System.Text;
+using System.Net.Security;
 
-namespace Services
+namespace Services.Common
 {
     public class RequestHelper
     {

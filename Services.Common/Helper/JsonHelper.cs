@@ -1,7 +1,7 @@
 ﻿using Newtonsoft.Json;
 using System.Collections.Generic;
 
-namespace System
+namespace Services.Common
 {
     public static class JsonExtends {
         public static string ToJson(this object o)
