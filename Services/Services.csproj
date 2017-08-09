@@ -35,17 +35,8 @@
     <Prefer32Bit>false</Prefer32Bit>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="Dapper">
-      <HintPath>..\Lib\Dapper.dll</HintPath>
-    </Reference>
-    <Reference Include="DataAccessHelper">
-      <HintPath>..\Lib\DataAccessHelper.dll</HintPath>
-    </Reference>
     <Reference Include="log4net">
       <HintPath>..\Lib\log4net.dll</HintPath>
-    </Reference>
-    <Reference Include="MySql.Data">
-      <HintPath>..\Lib\MySql.Data.dll</HintPath>
     </Reference>
     <Reference Include="Newtonsoft.Json">
       <HintPath>..\Lib\Newtonsoft.Json.dll</HintPath>
@@ -66,7 +57,7 @@
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="TaskService.cs" />
-    <Compile Include="Tasks\CallProcTask.cs" />
+    <Compile Include="Tasks\PingTask.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
@@ -83,11 +74,6 @@
     <None Include="UnInstall.bat">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>
-  </ItemGroup>
-  <ItemGroup>
-    <Content Include="SqlConfig\CallProSql.xml">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </Content>
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\Services.Common\Services.Common.csproj">
